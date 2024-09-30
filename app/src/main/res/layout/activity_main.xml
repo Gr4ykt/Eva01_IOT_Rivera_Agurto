@@ -1,19 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- INICIO DE SESIÓN -->
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
     android:orientation="vertical"
-    android:weightSum="1.0">
+    android:weightSum="2"
+    android:background="@drawable/background">
 
-    <TableLayout
+    <!-- Parte superior: Icono -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="InefficientWeight,UselessParent">
+
+        <ImageView
+            android:id="@+id/logoIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:contentDescription="@string/app_icon"
+            android:src="@drawable/user_login_icon" />
+
+        <!-- CAMPO USUARIO -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/usuario"
+            app:endIconMode="custom"
+            app:endIconDrawable="@drawable/login_field_user"
+            app:endIconContentDescription="Usuario icon"
+            app:endIconTint="@null">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#616161"
+                tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/contrase_a"
+            app:endIconMode="custom"
+            app:endIconDrawable="@drawable/pass_field_icon"
+            app:endIconContentDescription="Usuario icon"
+            app:endIconTint="@null">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#616161"
+                tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Botón de inicio de sesión -->
+        <Button
+            android:id="@+id/buttonLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#954ffd"
+            android:text="@string/iniciar_sesi_n"
+            tools:ignore="TextContrastCheck" />
+    </LinearLayout>
 
 
-        tools:ignore="MissingConstraints" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
