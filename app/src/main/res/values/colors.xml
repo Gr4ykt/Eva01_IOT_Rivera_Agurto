@@ -4,9 +4,11 @@
     <color name="white">#FFFFFFFF</color>
 
     <!-- COLOR TEXTO -->
-    <color name="text">#C6A0FF</color>
+    <color name="text">#616161</color>
 
     <!-- BACKGROUND 2 -->
     <color name="background2">#dbdbdb</color>
 
+
+    <color name="Purple">#954ffd</color>
 </resources>
