@@ -1,7 +1,24 @@
 <resources>
     <string name="app_name">Evaluacion1_IOT_Rivera_Agurto</string>
-    <string name="usuario">usuario</string>
+    <string name="usuario">Usuario</string>
     <string name="iniciar_sesi_n">Iniciar Sesión</string>
     <string name="app_icon">APP_ICON</string>
     <string name="contrase_a">Contraseña</string>
+    <string name="puertas_agregadas">Puertas agregadas</string>
+    <string name="puerta_patio">Puerta Patio</string>
+    <string name="puerta_2">Puerta 2</string>
+    <string name="puerta_3">Puerta 3</string>
+    <string name="puerta_4">Puerta 4</string>
+    <string name="puerta_5">Puerta 5</string>
+    <string name="puerta_6">Puerta 6</string>
+    <string name="puerta_7">Agregar puerta</string>
+    <string name="atras_text">Atrás</string>
+    <string name="hola_agust_n">Hola Agustín</string>
+    <string name="hola_agustin">Hola Agustin</string>
+    <string name="ver_todas_las_puertas">Ver todas las puertas</string>
+    <string name="agregar_un_dispositivo">Agregar un dispositivo</string>
+    <string name="dispositivos_disponibles">Dispositivos disponibles</string>
+    <string name="dispositivo_1">Dispositivo 1</string>
+    <string name="dispositivo_2">Dispositivo 2</string>
+    <string name="hecho">Hecho</string>
 </resources>
