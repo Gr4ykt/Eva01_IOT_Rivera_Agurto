@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- INICIO DE SESIÓN -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/inicarSesion"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    tools:context=".MainActivity"
     android:weightSum="2"
     android:background="@drawable/background">
 
@@ -13,9 +15,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
         android:layout_weight="1"
         android:gravity="center"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="InefficientWeight,UselessParent">
 
         <ImageView
@@ -34,15 +39,20 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:hint="@string/usuario"
-            app:endIconMode="custom"
-            app:endIconDrawable="@drawable/login_field_user"
             app:endIconContentDescription="Usuario icon"
+            app:endIconDrawable="@drawable/login_field_user"
+            app:endIconMode="custom"
+            app:hintTextColor="@color/black"
+            android:textColorHint="@color/black"
             app:endIconTint="@null">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Utext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColorHint="#616161"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:inputType="text"
                 tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -55,16 +65,21 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:hint="@string/contrase_a"
-            app:endIconMode="custom"
-            app:endIconDrawable="@drawable/pass_field_icon"
             app:endIconContentDescription="Usuario icon"
+            app:endIconDrawable="@drawable/pass_field_icon"
+            app:hintTextColor="@color/black"
+            android:textColorHint="@color/black"
+            app:endIconMode="custom"
             app:endIconTint="@null">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/P_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColorHint="#616161"
-                tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                tools:ignore="TextContrastCheck,VisualLintTextFieldSize"
+                android:inputType="textPassword"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -78,8 +93,44 @@
             android:layout_marginEnd="16dp"
             android:backgroundTint="#954ffd"
             android:text="@string/iniciar_sesi_n"
+            android:textColor="@color/white"
             tools:ignore="TextContrastCheck,VisualLintBounds" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingTop="5dp"
+            >
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_tienes_cuenta"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/buttonRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#954ffd"
+            android:text="@string/registrarse"
+            android:textColor="@color/white"
+            tools:ignore="TextContrastCheck,VisualLintBounds" />
+
+        <TextView
+            android:id="@+id/text_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/black" />
+
     </LinearLayout>
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

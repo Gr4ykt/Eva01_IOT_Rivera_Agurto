@@ -4,25 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    tools:context=".DetailDoor"
+    android:id="@+id/detail_door"
     android:background="@drawable/background"
     android:padding="16dp">
-
-    <!-- Botón de regreso -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Atrás"
-        android:textColor="@color/text"
-        android:textSize="18sp"
-        android:drawableStart="@drawable/arrow_atras"
-        android:drawablePadding="8dp"
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp"/>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="@color/Purple" />
 
     <!-- Layout para la imagen y título -->
     <LinearLayout

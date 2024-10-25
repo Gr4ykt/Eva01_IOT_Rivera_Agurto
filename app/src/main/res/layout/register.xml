@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- INICIO DE SESIÓN -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/register_panel"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegisterPanel"
+    android:weightSum="2"
+    android:background="@drawable/background">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="InefficientWeight,UselessParent">
+
+        <ImageView
+            android:id="@+id/logoIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:contentDescription="@string/app_icon"
+            android:src="@drawable/user_login_icon" />
+
+        <!-- CAMPO USUARIO -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/usuario"
+            app:endIconContentDescription="Usuario icon"
+            app:endIconDrawable="@drawable/login_field_user"
+            app:endIconMode="custom"
+            app:hintTextColor="@color/black"
+            android:textColorHint="@color/black"
+            app:endIconTint="@null">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/U_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:inputType="text"
+                tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- CAMPO CONTRASEÑA -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/contrase_a"
+            app:endIconContentDescription="Usuario icon"
+            app:endIconDrawable="@drawable/pass_field_icon"
+            app:endIconMode="custom"
+            app:hintTextColor="@color/black"
+            android:textColorHint="@color/black"
+            app:endIconTint="@null">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/RP_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                tools:ignore="TextContrastCheck,VisualLintTextFieldSize"
+                android:inputType="textPassword"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- CAMPO REPITE CONTRASEÑA -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/repeatPassField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/repite_contrase_a"
+            app:endIconContentDescription="Repite contraseña icon"
+            app:endIconDrawable="@drawable/pass_field_icon"
+            app:endIconMode="custom"
+            app:hintTextColor="@color/black"
+            android:textColorHint="@color/black"
+            app:endIconTint="@null">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/P_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                tools:ignore="TextContrastCheck,VisualLintTextFieldSize"
+                android:inputType="textPassword"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- BOTÓN REGISTRARSE -->
+        <Button
+            android:id="@+id/buttonRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#954ffd"
+            android:text="@string/registrar"
+            android:textColor="@color/white"
+            tools:ignore="TextContrastCheck,VisualLintBounds" />
+
+        <TextView
+            android:id="@+id/log_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,31 +1,34 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/homePanel"
     android:background="@drawable/background"
-    android:layout_height="match_parent">
-
+    android:contentDescription="@string/todo"
+    android:importantForAccessibility="no"
+    tools:context=".HomePanel">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="65dp"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hola_agustin"
-        android:textSize="25sp"
         android:layout_marginTop="20dp"
+        android:text="@string/hola_user"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -33,9 +36,9 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginTop="70dp"
-        android:paddingHorizontal="20sp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
@@ -44,39 +47,32 @@
             android:id="@+id/buttonHome"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#954ffd"
-            android:text="@string/ver_todas_las_puertas"
-            style="@style/Widget.Material3.Button.Icon"
-            app:icon="@drawable/puerta"
-            app:iconSize="50dp"
-            android:paddingVertical="10sp"
             android:layout_marginHorizontal="10dp"
+            android:layout_weight="1"
             android:background="@drawable/boton_cuadrado"
+            android:paddingVertical="10dp"
+            android:text="@string/ver_todas_las_puertas"
+            app:icon="@drawable/puerta"
             app:iconGravity="top"
-            tools:ignore="TextContrastCheck" />
+            app:iconSize="50dp"
+            android:textColor="@color/white"
+            tools:ignore="TextContrastCheck,VisualLintButtonSize" />
 
         <Button
             android:id="@+id/buttonHome2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#954ffd"
-            android:text="@string/agregar_un_dispositivo"
-            style="@style/Widget.Material3.Button.Icon"
-            app:icon="@drawable/doorsensor"
-            app:iconSize="50dp"
-            android:paddingVertical="10sp"
             android:layout_marginHorizontal="20dp"
+            android:layout_weight="1"
             android:background="@drawable/boton_cuadrado"
+            android:paddingVertical="10dp"
+            android:text="@string/agregar_un_dispositivo"
+            app:icon="@drawable/doorsensor"
             app:iconGravity="top"
-            tools:ignore="TextContrastCheck" />
-
-
-
-
+            android:textColor="@color/white"
+            app:iconSize="50dp"
+            tools:ignore="TextContrastCheck,VisualLintButtonSize" />
 
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
